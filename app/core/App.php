@@ -8,13 +8,17 @@
 
         public function __construct()
         {
+            
             $url = $this->parseURL();
-    
-            if(file_exists('../app/controllers/' . $url[0] . '.php')){
-                // var_dump($url);exit();
-                $this->controller = $url[0];
-                unset($url[0]);
-                // var_dump($this->controller);
+
+            // var_dump($url);
+            if($url !== null){
+                if(file_exists('../app/controllers/' . $url[0] . '.php')){
+                    // var_dump($url);exit();
+                    $this->controller = $url[0];
+                    unset($url[0]);
+                    // var_dump($this->controller);
+                }
             }
 
             require_once '../app/controllers/' . $this->controller . '.php';
