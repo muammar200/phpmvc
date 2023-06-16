@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Katanya tidak bisa menggunakan relative path, harus menggunakna absolute path -->
     <link href="<?= BASEURL; ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Halaman <?=$data['judul'];?></title>
 </head>
 <body>
