@@ -15,4 +15,10 @@
             $this->view('mahasiswa/detail', $data);
             $this->view('template/footer');
         }
+
+        public function tambah(){
+            if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0){
+                header('Location: ' . BASEURL . '/mahasiswa');
+            };
+        }
     }
