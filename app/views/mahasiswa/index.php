@@ -1,4 +1,10 @@
 <div class="container mt-3">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <?php Flasher::flash()?>
+        </div>
+    </div>
     <div class="row">
         <div class="col-6">
             <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#formModal">
@@ -8,10 +14,12 @@
             <ul class="list-group">
                 <?php
                 foreach($data['mhs'] as $mhs) : ?>
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item align-items-center">
                     <?=$mhs['nama']; ?>
-                    <a href="<?=BASEURL;?>/mahasiswa/detail/<?= $mhs['id'];?>"
-                        class="badge text-bg-primary align-items-center" style="text-decoration:none;">Detail</a>
+                    <a href="<?=BASEURL;?>/mahasiswa/hapus/<?= $mhs['id'];?>"
+                        class="badge text-bg-danger float-end ms-2" style="text-decoration:none;">Hapus</a>
+                        <a href="<?=BASEURL;?>/mahasiswa/detail/<?= $mhs['id'];?>"
+                            class="badge text-bg-primary float-end " style="text-decoration:none;">Detail</a>
                 </li>
                 <?php endforeach;?>
             </ul>
