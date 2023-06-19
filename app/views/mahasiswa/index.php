@@ -17,7 +17,7 @@
                 <li class="list-group-item align-items-center">
                     <?=$mhs['nama']; ?>
                     <a href="<?=BASEURL;?>/mahasiswa/hapus/<?= $mhs['id'];?>"
-                        class="badge text-bg-danger float-end ms-2" style="text-decoration:none;">Hapus</a>
+                        class="badge text-bg-danger float-end ms-2" style="text-decoration:none;" onclick="return confirm ('yakin untuk menghapus?')">Hapus</a>
                         <a href="<?=BASEURL;?>/mahasiswa/detail/<?= $mhs['id'];?>"
                             class="badge text-bg-primary float-end " style="text-decoration:none;">Detail</a>
                 </li>
