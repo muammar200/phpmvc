@@ -11,13 +11,10 @@
             
             $url = $this->parseURL();
 
-            // var_dump($url);
             if($url !== null){
                 if(file_exists('../app/controllers/' . $url[0] . '.php')){
-                    // var_dump($url);exit();
                     $this->controller = $url[0];
                     unset($url[0]);
-                    // var_dump($this->controller);
                 }
             }
 
@@ -41,9 +38,8 @@
 
             // jalankan controller dan method, serta kirimkan params jika ada
             // var_dump($this->controller);
-            // var_dump($this->controller);exit();
+            // var_dump($this->method);
             call_user_func_array([$this->controller, $this->method], $this->params);
-
         }
     
         public function parseURL()

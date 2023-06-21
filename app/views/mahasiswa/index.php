@@ -78,7 +78,6 @@
                         <label for="jurusan" class="form-label">Jurusan</label>
                         <select class="form-select" id="jurusan" name="jurusan" aria-label="Default select example"
                             required>
-                            <option selected>Pilih Jurusan</option>
                             <option value="Teknik Informatika">Teknik Informatika</option>
                             <option value="Sistem Informasi">Sistem Informasi</option>
                             <option value="Teknik Arsitektur">Teknik Arsitektur</option>
